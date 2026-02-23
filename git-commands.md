@@ -36,6 +36,12 @@
 
 ## `git log`
 - It shows commit history.
+
+## `git log --oneline`
+- It show commit history in summaries form in oneline
+
+
+
 ---
 
 
