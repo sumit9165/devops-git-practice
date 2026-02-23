@@ -40,6 +40,20 @@
 ## `git log --oneline`
 - It show commit history in summaries form in oneline
 
+## `git diff`
+- It shows changes not yet staged.
+
+## `git restore`
+- It restores files in working directory.
+
+## `git add .`
+- It stages all changes in current directory.
+
+## `git branch`
+- Lists branches.
+
+## `git checkout`
+- It switches branches.
 
 
 ---
