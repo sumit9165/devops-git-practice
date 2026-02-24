@@ -55,9 +55,20 @@
 ## `git checkout`
 - It switches branches.
 
+## `git remote add origin https://github.com/sumit9165/devops-git-practice.git`
+- It will add your local repository to remote repo
+
+## `git push -u origin <your local branch>`
+- It will push your local branch to remote with all commits of this branch.
+- you can push your all branches to remote.
+
 
 ---
-
+## What is the difference between origin and upstream?
+- You clone from upstream to create origin (your fork),
+- then use upstream to pull updates and origin to push your contributions
+- origin = url of your remote repository, where you have pull/push access.  
+- upstream = your forked repository's origin
 
 
 
