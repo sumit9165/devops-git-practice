@@ -49,7 +49,7 @@
 ## `git add .`
 - It stages all changes in current directory.
 
-## `git branch`
+## `git branch <your branch>`
 - Lists branches.
 
 ## `git checkout`
@@ -69,6 +69,7 @@
 - then use upstream to pull updates and origin to push your contributions
 - origin = url of your remote repository, where you have pull/push access.  
 - upstream = your forked repository's origin
+<<<<<<< HEAD
 
 ---------
 ## What is the difference between clone and fork?
@@ -95,5 +96,14 @@ To sync from your terminal, you must first configure a remote that points to the
 If you have the GitHub CLI installed, you can sync your fork with a single command:
 - `gh repo sync owner/your-fork -b main`
 -----------
+=======
+-----
+## What is the difference between git fetch and git pull?
+-  Fetch Changes from Upstream: `git fetch upstream`
+-  To keep your local repository up-to-date with the original repository, fetch the latest changes:
+-  Push Changes to Origin: `git push origin main`
+-  After merging the changes from the upstream repository, push your updated `main` branch to your forked repository on GitHub:
+------------
+>>>>>>> upstream/master
 
 
