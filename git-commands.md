@@ -69,7 +69,6 @@
 - then use upstream to pull updates and origin to push your contributions
 - origin = url of your remote repository, where you have pull/push access.  
 - upstream = your forked repository's origin
-<<<<<<< HEAD
 
 ---------
 ## What is the difference between clone and fork?
@@ -88,22 +87,24 @@ Clone when:
 ------
 ## After forking, how do you keep your fork in sync with the original repo?
 1. GitHub provides a built-in "Sync fork" feature that allows you to update your fork with a few clicks.
-2. Command Line Interface.
+2. On-Local Command Line Interface .
 To sync from your terminal, you must first configure a remote that points to the original repository.
 - `git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git`
 - Fetch the latest changes: `git fetch upstream`
+- Merge the changes into your local branch: `git merge upstream/main`
+- Update your fork on GitHub: `git push origin main`
+
 3. GitHub CLI
 If you have the GitHub CLI installed, you can sync your fork with a single command:
 - `gh repo sync owner/your-fork -b main`
------------
-=======
 -----
 ## What is the difference between git fetch and git pull?
 -  Fetch Changes from Upstream: `git fetch upstream`
 -  To keep your local repository up-to-date with the original repository, fetch the latest changes:
 -  Push Changes to Origin: `git push origin main`
--  After merging the changes from the upstream repository, push your updated `main` branch to your forked repository on GitHub:
-------------
->>>>>>> upstream/master
+-  After merging the changes from the upstream repository, push your updated `main` branch to your forked repository on.
+
+----
+
 
 
