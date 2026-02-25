@@ -1,6 +1,7 @@
 This is feature-login branch
 this is a text for feature-login branch
 this file is for commiting 2nd time
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 
@@ -10,3 +11,7 @@ this file is for commiting 2nd time
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+
+- this is commit
+>>>>>>> feature-login
