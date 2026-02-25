@@ -10,6 +10,7 @@ this file is for commiting 2nd time
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -17,6 +18,8 @@ this file is for commiting 2nd time
 
 - this is commit
 >>>>>>> feature-login
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
