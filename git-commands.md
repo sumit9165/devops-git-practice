@@ -105,6 +105,17 @@ If you have the GitHub CLI installed, you can sync your fork with a single comma
 -  After merging the changes from the upstream repository, push your updated `main` branch to your forked repository on.
 
 ----
+## `git merge <your branch>`
+- It will merge branch into main
+
+## `git stash`
+- It will hide your changes from head and you can switch to another branch.
+
+## `git stash pop`
+- It will recover your changes.
+
+## `git merge --squash <your branch>`
+- It will merge all commits in one line with main branch
 
 
 
