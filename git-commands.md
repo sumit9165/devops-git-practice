@@ -117,5 +117,90 @@ If you have the GitHub CLI installed, you can sync your fork with a single comma
 ## `git merge --squash <your branch>`
 - It will merge all commits in one line with main branch
 
+Below is a **structured reference table** covering:
 
+* **What it is** (conceptually)
+* **What it does** (technical effect)
+* **Why we use it**
+* **How to use it** (example)
 
+---
+
+# Branching
+
+| Command                  | What It Is                     | What It Does                                             | Why We Use It                            | How To Use                  |
+| ------------------------ | ------------------------------ | -------------------------------------------------------- | ---------------------------------------- | --------------------------- |
+| `git branch`             | Branch listing tool            | Lists all local branches                                 | See current branches and active branch   | `git branch`                |
+| `git branch <name>`      | Branch creation command        | Creates new branch pointer at current HEAD               | Start new feature without affecting main | `git branch feature-login`  |
+| `git checkout <branch>`  | Branch switch command (legacy) | Moves HEAD to specified branch                           | Work on another branch                   | `git checkout develop`      |
+| `git switch <branch>`    | Modern branch switch           | Changes current branch (cleaner alternative to checkout) | Clearer and safer branch switching       | `git switch main`           |
+| `git switch -c <branch>` | Create + switch                | Creates branch and switches to it                        | Start new feature immediately            | `git switch -c feature-api` |
+| `git merge <branch>`     | History integration command    | Combines specified branch into current branch            | Integrate completed feature              | `git merge feature-api`     |
+
+---
+
+# Remote
+
+| Command                       | What It Is             | What It Does                               | Why We Use It                     | How To Use                                   |
+| ----------------------------- | ---------------------- | ------------------------------------------ | --------------------------------- | -------------------------------------------- |
+| `git clone <url>`             | Repository copy tool   | Downloads remote repo with full history    | Start working on existing project | `git clone https://github.com/user/repo.git` |
+| `git remote -v`               | Remote inspection tool | Shows configured remote URLs               | Verify origin/upstream            | `git remote -v`                              |
+| `git fetch`                   | Remote sync (no merge) | Downloads remote changes but doesn’t merge | Review remote updates safely      | `git fetch origin`                           |
+| `git pull`                    | Fetch + merge          | Downloads and merges remote changes        | Update local branch quickly       | `git pull origin main`                       |
+| `git push`                    | Upload command         | Sends local commits to remote              | Share work with team              | `git push`                                   |
+| `git push -u origin <branch>` | Push + tracking setup  | Pushes branch and sets upstream            | Simplify future pushes            | `git push -u origin feature-login`           |
+
+---
+
+# Merging & Rebasing
+
+| Command                | What It Is                 | What It Does                             | Why We Use It                          | How To Use             |
+| ---------------------- | -------------------------- | ---------------------------------------- | -------------------------------------- | ---------------------- |
+| `git merge <branch>`   | History combining method   | Creates merge commit combining histories | Preserve branch history                | `git merge feature-ui` |
+| `git rebase <branch>`  | History rewriting method   | Moves commits to new base                | Cleaner, linear history                | `git rebase main`      |
+| `git rebase -i HEAD~3` | Interactive history editor | Lets you squash, edit, reorder commits   | Clean up commit history before pushing | `git rebase -i HEAD~3` |
+
+---
+
+# Stash & Cherry-pick
+
+| Command                    | What It Is        | What It Does                                | Why We Use It                             | How To Use                |
+| -------------------------- | ----------------- | ------------------------------------------- | ----------------------------------------- | ------------------------- |
+| `git stash`                | Temporary storage | Saves uncommitted changes                   | Switch branches without committing        | `git stash`               |
+| `git stash pop`            | Restore stash     | Reapplies stashed changes and removes stash | Resume paused work                        | `git stash pop`           |
+| `git cherry-pick <commit>` | Commit copy tool  | Applies specific commit onto current branch | Reuse specific fix without merging branch | `git cherry-pick a1b2c3d` |
+
+---
+
+# Reset & Revert
+
+| Command                    | What It Is                       | What It Does                                  | Why We Use It                    | How To Use                |
+| -------------------------- | -------------------------------- | --------------------------------------------- | -------------------------------- | ------------------------- |
+| `git reset --soft HEAD~1`  | History rewind (non-destructive) | Moves HEAD back, keeps changes staged         | Rewrite last commit              | `git reset --soft HEAD~1` |
+| `git reset --mixed HEAD~1` | Default reset                    | Moves HEAD back, unstages changes             | Redo commit cleanly              | `git reset HEAD~1`        |
+| `git reset --hard HEAD~1`  | Full reset                       | Moves HEAD back, deletes changes              | Discard local commits completely | `git reset --hard HEAD~1` |
+| `git revert <commit>`      | Safe undo                        | Creates new commit reversing specified commit | Undo pushed commits safely       | `git revert a1b2c3d`      |
+
+---
+
+# Recovery & Safety
+
+| Command      | What It Is    | What It Does             | Why We Use It                           | How To Use                                  |
+| ------------ | ------------- | ------------------------ | --------------------------------------- | ------------------------------------------- |
+| `git reflog` | Reference log | Shows all HEAD movements | Recover lost commits after reset/rebase | `git reflog` then `git reset --hard <hash>` |
+
+---
+
+# Summary
+
+* **Branching** = parallel development.
+* **Remote commands** = collaboration.
+* **Merge** = combine histories.
+* **Rebase** = rewrite history.
+* **Stash** = temporary save.
+* **Cherry-pick** = copy specific commit.
+* **Reset** = move branch pointer.
+* **Revert** = undo safely.
+* **Reflog** = emergency recovery tool.
+
+---
