@@ -1,6 +1,0 @@
-this is 1st change
-this is 2nd change
-<<<<<<< HEAD
-=======
-this is 3rd change
->>>>>>> feature-hotfix

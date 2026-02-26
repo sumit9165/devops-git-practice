@@ -1,5 +1,0 @@
-This file is for feature-dashboard
-this is second line for feature-dashboard
-
-- this is for stash
-- this is change
