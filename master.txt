@@ -1,10 +1,16 @@
 This is for master branch
 this is new line
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> feature-settings
 
 
 - this is 1
 - this is 2
 - this is 3
+<<<<<<< HEAD
 >>>>>>> feature-login
+=======
+>>>>>>> feature-settings
